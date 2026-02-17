@@ -60,6 +60,7 @@ Each game, the "shooter" rolls two dice:
 2. Open `index.html` in a browser
 3. Enter the number of games in the input field
    - By default, **1000 games** will be simulated if you do not change the input
+   - **Maximum allowed:** 1,000,000 games to prevent the browser from freezing
 4. You can either:
    - Click the **Simulate** button
    - Or press **Enter** while focused on the input field to start the simulation
