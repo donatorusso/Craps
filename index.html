@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Craps Simulator</title>
+    <script src="craps-engine.js" defer></script>
+    <script src="craps-app.js" defer></script>
+    <script src="craps-tests.js" defer></script>     
+    <link rel="stylesheet" href="style.css">    
+  </head>
+  <body>
+    <div class="container">
+      <h2>Craps Simulator</h2>
+
+      <label>How many games:</label>
+      <input id="gamesInput" type="number" value="1000">      
+      
+      <div id="error" class="error"></div>
+
+      <button id="simulateBtn">Simulate</button>
+      
+      <ul id="results"></ul>
+    
+    </div>    
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // Initialise application
+        new CrapsApp();
+        
+        // Uncomment to run basic tests
+        // new CrapsTests().run();
+      });
+    </script>
+  </body>
+</html>
