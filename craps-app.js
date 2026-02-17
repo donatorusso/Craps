@@ -18,9 +18,16 @@ class CrapsApp {
 
     handleClick() {
         const games = Number(this.input.value);
+        const MAX_GAMES = 1000000;
 
         if (games <= 0) {
             this.showError("Number of games must be > 0");
+            this.clearResults();
+            return;
+        }
+
+        if (games > MAX_GAMES) {
+            this.showError(`Please enter a number less than ${MAX_GAMES}`);
             this.clearResults();
             return;
         }
