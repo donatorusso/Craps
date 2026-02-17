@@ -7,7 +7,13 @@ class CrapsApp {
         this.button = document.getElementById("simulateBtn");
         this.results = document.getElementById("results");
         this.error = document.getElementById("error");
+        
         this.button.addEventListener("click", () => this.handleClick());
+        this.input.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                this.button.click();
+            }
+        });
     }
 
     handleClick() {
